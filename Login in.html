@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>登入</title>
+        <meta charset="UTF-8">
+        <style>
+            #log{
+                position:fixed;
+                width:24%; height:40px;
+                left:24%;
+            }
+            #reg{
+                position:fixed;
+                width:24%; height:40px;
+                left:52%;
+            }
+        </style>
+    </head>
+    <body style="background-color:hsl(324, 8%, 93%)">
+        <header style="text-align:center">
+            <nav style="height: 71px;">
+            <div class="nav-wrapper">
+            <a href="#!" class="brand-logo" style="margin-top: 15px">登入</a>
+            </div>
+            </nav>
+        </header>
+
+        <form>
+            <div class="row" style="width: 64%; margin-left:23%;margin-top: 20px;">
+                <div class="input-field col s10 m10 l10">
+                    <input id="Account" type="text">
+                    <label for="Account">帳號</label>
+                </div>
+            </div>
+            <div class="row" style="width: 64%; margin-left:23%;margin-top: 20px;">
+                <div class="input-field col s10 m10 l10">
+                    <input id="PassWord" type="text">
+                    <label for="PassWord">密碼</label>
+                </div>
+            </div>
+            <div>
+                <input style="border-radius:5px;" id="log" type="submit" value="登入">
+                <input style="border-radius:5px;" id="reg" type="button" value="註冊" onclick="location.href='RegisteredAccount.html'">
+                
+            </div>
+            <div style="text-align: center;">
+              <input style="border-radius:5px; position:relative; width:52%; height:40px; top:50px;" name="Back" type="button" id="Back" onClick="javascript:history.back(1)" value="回一上頁" />
+            </div>
+        </form>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function(){
+               $(".button-collapse").sideNav();
+            })
+        </script>
+    </body>
+</html>
