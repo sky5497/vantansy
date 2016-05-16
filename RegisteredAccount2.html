@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>註冊</title>
+        <meta charset="UTF-8">
+    </head>
+    <body style="background-color:hsl(324, 8%, 93%)">
+        <header style="text-align:center">
+            <nav>
+            <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">註冊</a>
+            </div>
+            </nav>
+        </header>
+        <div class="row" style="width: 300px;margin-top: 20px;">
+            <div class="input-field col s10 m10 l10">
+                <img src="reg.jpg" style="obect-fit:contain; width: 100%;">
+            </div>
+        </div>
+
+        <form>
+            <div class="row" style="width:300px;margin-top:40px;">
+                <div class="input-field col s10 m10 l10">
+                    <input name="Account" id="Account" type="text">
+                    <label for="Account">帳號</label>
+                </div>
+            </div>
+
+            <div class="row" style="width:300px;margin-top:40px;">
+                <div class="input-field col s10 m10 l10">
+                    <input name="PassWord" id="PassWord" type="text">
+                    <label for="PassWord">密碼</label>
+                </div>
+            </div>
+            <div class="row" style="width:300px;margin-top:40px;">
+                <div class="input-field col s10 m10 l10">
+                    <input name="PassWordCor" id="PassWordCor" type="text">
+                    <label for="PassWordCor">確認密碼</label>
+                </div>
+            </div>
+            <div class="row" style="width:300px;margin-top:40px;">
+                <div class="input-field col s10 m10 l10">
+                    <input name="UserName" id="UserName" type="text">
+                    <label for="UserName">姓名</label>
+                </div>
+            </div>
+            <div class="row" style="width:300px;margin-top:40px;">
+                <div class="input-field col s10 m10 l10">
+                    <input id="Account" type="text">
+                    <label for="Account">信箱</label>
+                </div>
+            </div>
+
+            <div class="row" style="width:300px">
+                <input type="submit" value="確定" style="border-radius:5px; width:100px; padding:10px; font-family:微軟正黑體; margin-left:5px">
+                <input type="button" value="返回上一頁" style="border-radius:5px; width:100px; padding:10px; font-family:微軟正黑體; margin-left:42px" onClick="javascript:history.back(1)">
+            </div>
+        </form>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function(){
+               $(".button-collapse").sideNav();
+            })
+        </script>
+    </body>
+</html>

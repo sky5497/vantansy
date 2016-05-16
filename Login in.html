@@ -52,6 +52,7 @@
             <div style="text-align: center;">
               <input style="border-radius:5px; position:relative; width:52%; height:40px; top:50px;" name="Back" type="button" id="Back" onClick="javascript:history.back(1)" value="回一上頁" />
             </div>
+            
         </form>
         {% if note_title %}
         <p>Title: {{note_title}}</p>
@@ -77,21 +78,21 @@
         </div>
         </form>
 
-{% for note in notes %}
-<div class="note">
-    <h4>{{ note.title }}</h4>
-    <p class="note-content">{{ note.content }}</p>
-    {% if note.checklist_items %}
-    <ul>
-        {% for item in note.checklist_items %}
-        <li class="{%if item.get() .checked%}checked{%endif%}">
-            {{item.get().title}}</li>
+        {% for note in notes %}
+        <div class="note">
+            <h4>{{ note.title }}</h4>
+            <p class="note-content">{{ note.content }}</p>
+            {% if note.checklist_items %}
+            <ul>
+                {% for item in note.checklist_items %}
+                <li class="{%if item.get() .checked%}checked{%endif%}">
+                    {{item.get().title}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
         {% endfor %}
-    </ul>
-    {% endif %}
-</div>
-{% endfor %}
-
+    
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
