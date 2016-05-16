@@ -53,41 +53,29 @@
               <input style="border-radius:5px; position:relative; width:52%; height:40px; top:50px;" name="Back" type="button" id="Back" onClick="javascript:history.back(1)" value="回一上頁" />
             </div>
         </form>
-
-        <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script type="text/javascript">
-            $( document ).ready(function(){
-               $(".button-collapse").sideNav();
-            })
-        </script>
-    </body>
-</html>
-
-{% if note_title %}
-<p>Title: {{note_title}}</p>
-<p>Content: {{note_content}}</p>
-{% endif %}
-<h4>Add a new note</h4>
-<form action="" method="post">
-    <div class="form-group">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" />
-    </div>
-    <div class="form-group">
-        <label for="content">Content:</label>
-        <textarea id="content" name="content"></textarea>
-    </div>
-    <div class="form-group">
-        <label for="checklist_items">Checklist items:</label>
-        <input type="text" id="checklist_items" name="checklist_items"
-placeholder="comma,separated,values"/>
-    </div>
-    <div class="form-group">
-        <button type="submit">Save note</button>
-    </div>
-</form>
+        {% if note_title %}
+        <p>Title: {{note_title}}</p>
+        <p>Content: {{note_content}}</p>
+        {% endif %}
+        <h4>Add a new note</h4>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" />
+        </div>
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea id="content" name="content"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="checklist_items">Checklist items:</label>
+            <input type="text" id="checklist_items" name="checklist_items"
+        placeholder="comma,separated,values"/>
+        </div>
+        <div class="form-group">
+            <button type="submit">Save note</button>
+        </div>
+        </form>
 
 {% for note in notes %}
 <div class="note">
@@ -103,4 +91,17 @@ placeholder="comma,separated,values"/>
     {% endif %}
 </div>
 {% endfor %}
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function(){
+               $(".button-collapse").sideNav();
+            })
+        </script>
+    </body>
+</html>
+
+
 
